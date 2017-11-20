@@ -13,7 +13,8 @@
 	font-size: 18px;
 }
 
-.page-header__main-nav__menu2 {
+.page-header__main-nav__menu2,
+.page-header__main-nav__item-delivery {
 	display: none;
 }
 
@@ -242,6 +243,23 @@
 	.active {
 		border-bottom: 2px solid #333;
 	}
+
+	.page-header__main-nav__item-delivery  {
+		display: inline;
+		position: absolute;
+
+		top: 76.5px;
+		right: 50px;
+
+		a {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 15px;
+			font-style: 400;
+			line-height: 24px;
+
+			color: #444;	
+		}
+	}
 }
 
 @media @d-width {
@@ -303,6 +321,12 @@
 				color: #000;
 			}
 		}
+	}
+
+	.page-header__main-nav__item-delivery  {
+		right: 0;
+		left: 50%;
+		margin-left: 265px;
 	}
 }
 
