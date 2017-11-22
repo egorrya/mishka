@@ -372,8 +372,7 @@ a.btn {
 a.btn:hover {
   text-decoration: none;
   color: #333;
-  border: 1px solid #ccc;
-  border: 1px solid;
+  border: 2px solid #ccc;
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   background-color: #fff;
@@ -382,7 +381,7 @@ a.btn:hover {
 a.btn:active {
   text-decoration: none;
   color: #000;
-  border: 1px solid #aaa;
+  border: 2px solid #aaa;
   background-color: #ddd;
 }
 .page-header {
@@ -405,7 +404,8 @@ a.btn:active {
   background-color: #f9f9f9;
 }
 .home-section__title {
-  padding: 70px 14% 107px;
+  min-height: 295px;
+  padding: 72.5px 14% 107px;
   text-align: center;
   background-color: #f9f9f9;
 }
@@ -428,50 +428,50 @@ a.btn:active {
 }
 .product {
   position: relative;
-  padding: 10px 30px 35px;
-}
-.product::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-repeat: repeat-x;
-  height: 10px;
-  background-size: 20px 20px;
-  background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ddd 13px);
+  padding: 10px 30px 0;
+  width: auto;
 }
 .product__week {
   font-size: 16px;
   font-weight: bold;
-  line-height: 0px;
+  line-height: 0;
+  margin-bottom: 35px;
   text-transform: uppercase;
   color: #63d1bb;
-  margin-bottom: 35px;
 }
 .product__desc {
-  margin-bottom: 20px;
+  margin-bottom: 17.5px;
 }
 .product__table {
   width: 100%;
+  margin-bottom: 27.5px;
   border-collapse: collapse;
   text-align: left;
-  margin-bottom: 27.5px;
 }
 .product__table td {
-  border-bottom: 1px solid #ddd;
   padding: 7px 22px 7px 0;
+  border-bottom: 1px solid #ddd;
 }
 .product__image {
   display: block;
   width: 260px;
   height: 317.5px;
-  background-color: #111;
-  margin-bottom: 22.5px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  background-color: #ddd;
 }
 .product__price {
-  text-align: center;
   margin-bottom: 25px;
+  text-align: center;
+}
+.product__btn {
+  margin-bottom: 25px;
+}
+.bottom-wave {
+  display: block;
+  height: 6px;
+  background: url(../img/zigzag-line-mobile.png);
+  background-repeat: repeat-x;
 }
 @media (min-width: 768px){
   h1{
@@ -573,9 +573,9 @@ a.btn:active {
     position: relative;
   }
   .home-section__container-fluid{
-    width: auto;
     display: -ms-grid;
     display: grid;
+    width: auto;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
@@ -610,6 +610,61 @@ a.btn:active {
     background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
     background-repeat: repeat-x;
     background-size: 40px 20px;
+  }
+  .product{
+    width: 86%;
+    /* 640px / 768px */
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+  .product{
+    padding: 17.5px 0 0;
+  }
+  .product__title{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+  }
+  .product__week{
+    line-height: 16px;
+    position: absolute;
+    top: 55px;
+    right: 10px;
+    width: 100px;
+    text-align: center;
+  }
+  .product__desc{
+    width: 42.5%;
+    margin-bottom: 35px;
+  }
+  .product__table{
+    font-size: 15px;
+    width: 43.5%;
+    margin-bottom: 50px;
+  }
+  .product__table td{
+    padding: 5px 0 5px 0;
+  }
+  .product__image{
+    position: absolute;
+    z-index: 1;
+    top: 150px;
+    right: 0;
+    width: 330px;
+    height: 400px;
+  }
+  .product__price{
+    font-size: 18px;
+    width: 44%;
+    margin-bottom: 32.5px;
+  }
+  .product__btn{
+    width: 43.5%;
+    margin-bottom: 52.5px;
+  }
+  .bottom-wave{
+    height: 15px;
+    background: url(../img/zigzag-line-tablet.png);
   }
 }
 @media (min-width: 768px) and (min-width: 768px){
@@ -681,6 +736,43 @@ a.btn:active {
   .home-section__title{
     padding: 117.5px 20% 327px;
   }
+  .product{
+    padding: 90px 0 0 175px;
+  }
+  .product__week{
+    top: 140px;
+    right: 0;
+    left: 30px;
+  }
+  .product__desc{
+    width: 32.5%;
+    margin-bottom: 50px;
+  }
+  .product__table{
+    width: 33.5%;
+    margin-bottom: 102.5px;
+  }
+  .product__table td{
+    padding: 5px 0 5px 0;
+  }
+  .product__image{
+    top: 72.5px;
+    right: 0;
+    width: 525px;
+    height: 635px;
+  }
+  .product__price{
+    width: 34%;
+    margin-bottom: 30px;
+  }
+  .product__btn{
+    width: 33.5%;
+    margin-bottom: 75px;
+  }
+  .bottom-wave{
+    height: 23px;
+    background: url(../img/zigzag-line-desktop.png);
+  }
 }
 @media (min-width: 1200px) and (min-width: 768px){
   .page-header__container{
@@ -703,7 +795,7 @@ a.btn:active {
   }
   .page-header{
     position: static ;
-    padding-top: 30px;
+    padding-top: 22.5px;
   }
   /* NAVIGATION */
   .page-header__main-nav{

@@ -1,69 +1,187 @@
 .product {
 	position: relative;
-	padding: 10px 30px 35px;
-}
 
-// wave 
+	padding: 10px 30px 0;
 
-.product::before{
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	background-repeat: repeat-x;
-	height: 10px;
-	background-size: 20px 20px;
-	background-image: radial-gradient(circle at 10px -5px, transparent 12px, #ddd 13px);
-}
-
-
-.product__container-fluid {
 	.container-fluid();
 }
 
 .product__week {
 	font-size: 16px;
 	font-weight: bold;
-	line-height: 0px;
+	line-height: 0;
+
+	margin-bottom: 35px;
 
 	text-transform: uppercase;
 
 	color: #63d1bb;
-
-	margin-bottom: 35px;
 }
 
 .product__desc {
-	margin-bottom: 20px;
+	margin-bottom: 17.5px;
 }
 
 .product__table {
 	width: 100%;
-	border-collapse: collapse;
-	text-align: left;
 	margin-bottom: 27.5px;
 
+	border-collapse: collapse;
+
+	text-align: left;
+
 	td {
-		border-bottom: 1px solid #ddd;
 		padding: 7px 22px 7px 0;
+
+		border-bottom: 1px solid #ddd;
 	}
 }
 
 .product__image {
-	display: block; //временно
-	width: 260px;
-	height: 317.5px;
-	background-color: #111;
-	margin-bottom: 22.5px;
+    display: block; //временно
+
+    width: 260px;
+    height: 317.5px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    background-color: #ddd;
 }
 
 .product__price {
+	margin-bottom: 25px;
+
 	text-align: center;
+}
+
+.product__btn {
 	margin-bottom: 25px;
 }
 
+.bottom-wave {
+	display: block;
 
-@media @m-width-only {
-	
+	height: 6px;
+
+	background: url(../img/zigzag-line-mobile.png);
+	background-repeat: repeat-x;
+}
+
+@media @t-width {
+	.product {
+		padding: 17.5px 0 0;
+	}
+
+	.product__title {
+		position: relative;
+		z-index: 2;
+
+		margin-bottom: 50px;
+	}
+
+	.product__week {
+		line-height: 16px;
+
+        position: absolute;  // belongs to .products
+        top: 55px;
+        right: 10px;
+
+        width: 100px;
+
+        text-align: center;
+    }
+
+    .product__desc {
+    	width: 42.5%;
+    	margin-bottom: 35px;
+    }
+
+    .product__table {
+    	font-size: 15px;
+
+    	width: 43.5%;
+    	margin-bottom: 50px;
+
+    	td {
+    		padding: 5px 0 5px 0;
+    	}
+    }
+
+    .product__image {
+        position: absolute;  // belongs to .products
+        z-index: 1;
+        top: 150px;
+        right: 0;
+
+        width: 330px;
+        height: 400px;
+    }
+
+    .product__price {
+    	font-size: 18px;
+
+    	width: 44%;
+    	margin-bottom: 32.5px;
+    }
+
+    .product__btn {
+    	width: 43.5%;
+    	margin-bottom: 52.5px;
+    }
+
+    .bottom-wave {
+    	height: 15px;
+
+    	background: url(../img/zigzag-line-tablet.png);
+    }
+}
+
+@media @d-width {
+	.product {
+		padding: 90px 0 0 175px;
+	}
+
+	.product__week {
+        top: 140px;
+        right: 0;
+        left: 30px;
+    }
+
+    .product__desc {
+    	width: 32.5%;
+    	margin-bottom: 50px;
+    }
+
+    .product__table {
+    	width: 33.5%;
+    	margin-bottom: 102.5px;
+
+    	td {
+    		padding: 5px 0 5px 0;
+    	}
+    }
+
+    .product__image {
+    	top: 72.5px;
+    	right: 0;
+
+    	width: 525px;
+    	height: 635px;
+    }
+
+    .product__price {
+    	width: 34%;
+    	margin-bottom: 30px;
+    }
+
+    .product__btn {
+    	width: 33.5%;
+    	margin-bottom: 75px;
+    }
+
+    .bottom-wave {
+    	height: 23px;
+
+    	background: url(../img/zigzag-line-desktop.png);
+    }
 }
