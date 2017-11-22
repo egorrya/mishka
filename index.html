@@ -21,7 +21,7 @@
 <!-- <script src="assets/libs/jquery-3.2.1.min.js"></script> -->
 <!-- <script src="assets/libs/jquery.waypoints.min.js"></script> -->
 <!-- <script src="assets/libs/animate-css.js"></script> -->
-<!-- <script src="assets/js/common.js"></script> -->
+
 </head>
 <body >
   <h1 class="visually-hidden"></h1>
@@ -79,32 +79,75 @@
     </div>
   </section>
   <section class="product">
-      <h1 class="product__title">Вязаные корзинки</h1>
-      <p class="product__week">Товар недели</p>
-      <p class="product__desc">
-        Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-      </p>
-      <table class="product__table">
-        <tr>
-          <td>Цвет:</td>
-          <td>«Тиффани»/серый</td>
-        </tr>
-        <tr>
-          <td>Диаметр:</td>
-          <td>25 см</td>
-        </tr>
-        <tr>
-          <td>Высота:</td>
-          <td>15 см</td>
-        </tr>
-      </table>
-      <img class="product__image" width="260" height="315" src="" alt=""/>
-      <h2 class="product__price">Цена: 990 руб.</h2>
-      <a class="product__btn btn" href="#">Заказать</a>
+    <h1 class="product__title">Вязаные корзинки</h1>
+    <p class="product__week">Товар недели</p>
+    <p class="product__desc">
+      Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+    </p>
+    <table class="product__table">
+      <tr>
+        <td>Цвет:</td>
+        <td>«Тиффани»/серый</td>
+      </tr>
+      <tr>
+        <td>Диаметр:</td>
+        <td>25 см</td>
+      </tr>
+      <tr>
+        <td>Высота:</td>
+        <td>15 см</td>
+      </tr>
+    </table>
+    <img class="product__image" width="260" height="315" src="" alt=""/>
+    <h2 class="product__price">Цена: 990 руб.</h2>
+    <a class="product__btn btn" href="#">Заказать</a>
+  </section>
+  <span class="bottom-wave"></span><!-- css code in product.less -->  
+  <section class="about">
+    <h1 class="about__title">Коротко о нас:</h1>
+    <div class="about__items">
+      <div class="about__item">
+        <h2>Экологически<br>чистые материалы</h2>
+      </div>
+      <div class="about__item">
+        <h2>Скандинавский стиль<br>по российской цене</h2>
+      </div>
+      <div class="about__item">
+        <h2>Увеличивает лайки<br>на фотографиях</h2>
+      </div>
+      <div class="about__item">
+        <h2>Поддержка отечественного<br>производителя</h2>
+      </div>
+      <div class="about__item">
+        <h2>Связано вручную с<br>любовью и умилением</h2>
+      </div>
+      <div class="about__item">
+        <h2>Поставляется в<br>подарочной упаковке</h2>
+      </div>
+    </div>
+  </section>
+  <section class="reviews">
+    <h1 class="reviews__title">Отзывы</h1>
+    <ul id="slides" class="reviews__review">
+      <li class="slide showing">
+        <p class="reviews__review__body">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
+        <h2 class="reviews__review__username">Анастасия Красильникова</h2>
+        <p class="reviews__review__usertag">@mississkras</p>
+      </li> 
+      <li class="slide ">
+        <p class="reviews__review__body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <h2 class="reviews__review__username">Анастасия Красильникова</h2>
+        <p class="reviews__review__usertag">@mississkras</p>
+      </li>
+    </ul>
+    <div class="reviews__controls-all">
+      <button class="reviews__controls__left reviews__controls" id="previous">Previous</button>
+      <button class="reviews__controls__right reviews__controls" id="next">Next</button>
+    </div>
+    <a href="" class="reviews__btn btn">Написать</a> 
   </section>
   <span class="bottom-wave"></span><!-- css code in product.less -->  
 
-
-
+  <script src="assets/js/common.js"></script>
 </body>
 </html>
