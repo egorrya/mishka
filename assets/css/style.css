@@ -43,6 +43,7 @@ body {
  * Add the correct display in IE 9-.
  */
 
+footer,
 header,
 nav,
 section {
@@ -340,7 +341,6 @@ body {
 a {
   font-size: 16px;
   font-style: 400;
-  border-bottom: 1px solid #62d1ba;
   text-decoration: none;
 }
 a span {
@@ -483,7 +483,7 @@ a.btn:active {
   text-align: center;
 }
 .product__btn {
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 .bottom-wave {
   display: block;
@@ -493,7 +493,7 @@ a.btn:active {
 }
 .about {
   width: auto;
-  padding: 22.5px 30px 0;
+  padding: 14px 30px 0;
 }
 .about__title {
   margin-bottom: 0px;
@@ -545,10 +545,13 @@ a.btn:active {
   border-right: 0  solid #ddd;
 }
 .reviews__btn {
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 .contacts {
-  padding: 25px 30px 0;
+  padding: 25px 0 0;
+}
+.contacts__container-fluid {
+  padding: 0 30px;
   width: auto;
 }
 .contacts__title {
@@ -574,6 +577,7 @@ a.btn:active {
 .contacts__adress {
   display: -ms-grid;
   display: grid;
+  margin-bottom: 30px;
   -ms-grid-columns: 1fr 2.25fr;
       grid-template-columns: 1fr 2.25fr;
 }
@@ -581,6 +585,27 @@ a.btn:active {
   font-size: 14px;
   line-height: 30px;
   margin-top: -2px;
+}
+.contacts__map {
+  width: 100%;
+  height: 455px;
+  margin-bottom: 50px;
+  background: url(../img/map.jpg) center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contacts__btn {
+  margin-bottom: 35px;
+}
+.page-footer {
+  background-color: #f1f1f1;
+}
+.page-footer__social {
+  padding: 30px 0;
+  text-align: center;
+}
+.page-footer__social a {
+  font-size: 0;
 }
 @media (min-width: 768px){
   h1{
@@ -833,7 +858,7 @@ a.btn:active {
     top: 75px;
     right: 0;
   }
-  .contacts{
+  .contacts__container-fluid{
     width: 86%;
     /* 640px / 768px */
     max-width: 1050px;
@@ -841,6 +866,9 @@ a.btn:active {
   }
   .contacts{
     padding: 30px 0 0;
+  }
+  .contacts__container-fluid{
+    padding: 0 0;
   }
   .contacts__title{
     margin-bottom: 52.5px;
@@ -851,7 +879,7 @@ a.btn:active {
     grid-template-columns: 1fr 1fr;
   }
   .contacts__email{
-    margin-bottom: 70px;
+    margin-bottom: 110px;
     -ms-grid-columns: 1fr 2fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
   }
@@ -860,6 +888,7 @@ a.btn:active {
     border-bottom: 1px solid #62d1ba;
   }
   .contacts__adress{
+    margin-bottom: 60px;
     -ms-grid-columns: 1fr 3.5fr;
     grid-template-columns: 1fr 3.5fr;
   }
@@ -867,6 +896,13 @@ a.btn:active {
     font-size: 16px;
     line-height: 30px;
     margin-top: 0;
+  }
+  .contacts__map{
+    width: 100%;
+    height: 460px;
+  }
+  .contacts__btn{
+    text-align: center;
   }
 }
 @media (min-width: 768px) and (min-width: 768px){
@@ -1002,6 +1038,7 @@ a.btn:active {
     top: 80px;
   }
   .contacts{
+    position: relative;
     padding: 105px 0 0 175px ;
   }
   .contacts__body{
@@ -1013,6 +1050,19 @@ a.btn:active {
     margin-bottom: 27.5px;
     -ms-grid-columns: 1fr 2fr 1.5fr;
     grid-template-columns: 1fr 2fr 1.5fr;
+  }
+  .contacts__adress{
+    margin-bottom: 82.5px;
+  }
+  .contacts__map{
+    position: absolute;
+    top: 75px;
+    left: 49vw;
+    width: 525px;
+    height: 457px;
+  }
+  .contacts__btn{
+    text-align: left;
   }
 }
 @media (min-width: 1200px) and (min-width: 768px){
