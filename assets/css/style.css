@@ -319,6 +319,12 @@ button:-moz-focusring {
 .fa-search:before {
   content: "\f002";
 }
+.fa-long-arrow-left:before {
+  content: "\f177";
+}
+.fa-long-arrow-right:before {
+  content: "\f178";
+}
 .fa-shopping-basket:before {
   content: "\f291";
 }
@@ -407,7 +413,12 @@ a.btn:active {
   background-color: #FFF;
 }
 .page-header__brand {
+  display: block;
+  height: 55px;
+  font-size: 0px;
   text-align: center;
+  background: url(../img/mishka-logo-mobile.png) center 20px;
+  background-repeat: no-repeat;
 }
 .fa {
   color: rgba(0, 0, 0, 0.3);
@@ -419,13 +430,14 @@ a.btn:active {
 }
 /* ANIMATION */
 .home-section {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
 }
 .home-section__title {
   min-height: 295px;
-  padding: 72.5px 14% 107px;
+  padding: 70px 14% 107px;
   text-align: center;
-  background-color: #f9f9f9;
+  background: url(../img/hero-desktop.jpg) center 0px;
+  background-repeat: no-repeat;
 }
 .home-section__item {
   font-family: 'tahoma';
@@ -472,8 +484,6 @@ a.btn:active {
 }
 .product__image {
   display: block;
-  width: 260px;
-  height: 317.5px;
   margin: 0 auto;
   margin-bottom: 25px;
   background-color: #ddd;
@@ -488,7 +498,7 @@ a.btn:active {
 .bottom-wave {
   display: block;
   height: 6px;
-  background: url(../img/zigzag-line-mobile.png);
+  background: url(../img/zigzag-line-mobile.svg);
   background-repeat: repeat-x;
 }
 .about {
@@ -537,9 +547,13 @@ a.btn:active {
   width: 50%;
   height: 50px;
   margin-bottom: 40px;
+  cursor: pointer;
   border: 1px solid #ddd;
   background-color: #fff;
-  cursor: pointer;
+}
+.reviews__controls .fa {
+  color: #000;
+  font-size: 34px;
 }
 .reviews__controls__left {
   border-right: 0  solid #ddd;
@@ -631,7 +645,9 @@ a.btn:active {
   }
   .page-header__brand{
     position: relative;
-    text-align: left;
+    height: 80px;
+    background: url(../img/mishka-logo-tablet.png) left 20px;
+    background-repeat: no-repeat;
   }
   .page-header__main-nav__items{
     display: -ms-grid;
@@ -706,6 +722,8 @@ a.btn:active {
   .home-section__title{
     min-height: 620px;
     padding: 125px 130px 347px;
+    background: url(../img/hero-desktop.jpg) center 0px;
+    background-repeat: no-repeat;
   }
   .home-section__items{
     position: relative;
@@ -789,7 +807,7 @@ a.btn:active {
     top: 150px;
     right: 0;
     width: 330px;
-    height: 400px;
+    height: 394px;
   }
   .product__price{
     font-size: 18px;
@@ -852,6 +870,12 @@ a.btn:active {
     top: 302.5px;
     right: 0;
     width: 26%;
+  }
+  .reviews__controls{
+    border: 0px;
+  }
+  .reviews__controls:hover{
+    background-color: #eee;
   }
   .reviews__btn{
     position: absolute;
@@ -932,9 +956,11 @@ a.btn:active {
     grid-template-columns: 1fr 305px;
   }
   .page-header__brand{
-    position: relative;
-    text-align: right;
     margin-right: 150px;
+    height: 80px;
+    width: 85%;
+    background: url(../img/mishka-logo-desktop.png) right 10px;
+    background-repeat: no-repeat;
   }
   .page-header__main-nav__menu1{
     position: absolute;
@@ -962,7 +988,7 @@ a.btn:active {
   .page-header__main-nav__menu2 .page-header__main-nav__item{
     display: inline-block;
     padding: 0;
-    margin-right: 25px;
+    padding-right: 25px;
   }
   .page-header__main-nav__menu2 .page-header__main-nav__item a{
     font-family: 'verdana';
@@ -1083,7 +1109,6 @@ a.btn:active {
   }
   .page-header{
     position: static ;
-    padding-top: 22.5px;
   }
   /* NAVIGATION */
   .page-header__main-nav{
@@ -1175,5 +1200,12 @@ a.btn:active {
   }
   #hamburger:checked ~ .menuicon span::after{
     transform: rotate(-45deg);
+  }
+  .home-section__title{
+    background-size: 400px;
+  }
+  .product__image{
+    width: 260px;
+    height: 315px;
   }
 }

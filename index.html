@@ -27,9 +27,7 @@
   <h1 class="visually-hidden"></h1>
   <header class="page-header">
     <div class="page-header__container">
-      <div class="page-header__brand">
-        mishka
-      </div>
+      <a href="#" class="page-header__brand">MISHKA</a>
       <nav class="page-header__main-nav">
         <input type="checkbox" id="hamburger"/>
         <label class="menuicon" for="hamburger">
@@ -98,7 +96,12 @@
         <td>15 см</td>
       </tr>
     </table>
-    <img class="product__image" width="260" height="315" src="" alt=""/>
+    <picture class="product__image">
+      <source media="(min-width: 960px)" srcset="/assets/img/triple-set-desktop.jpg"/>
+      <source media="(min-width: 640px)" srcset="assets/img/triple-set-tablet.jpg, 
+      /assets/img/triple-set-tablet@2x.jpg 2x"/>
+      <img src="assets/img/triple-set-mobile.jpg" srcset="assets/img/triple-set-mobile@2x.jpg 2x" alt="" style="width:100%;"/>
+    </picture>
     <h2 class="product__price">Цена: 990 руб.</h2>
     <a class="product__btn btn" href="#">Заказать</a>
   </section>
@@ -141,8 +144,8 @@
       </li>
     </ul>
     <div class="reviews__controls-all">
-      <button class="reviews__controls__left reviews__controls" id="previous">Previous</button>
-      <button class="reviews__controls__right reviews__controls" id="next">Next</button>
+      <button class="reviews__controls__left reviews__controls" id="previous"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
+      <button class="reviews__controls__right reviews__controls" id="next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
     </div>
     <a href="" class="reviews__btn btn">Написать</a> 
   </section>

@@ -5,7 +5,12 @@
 }
 
 .page-header__brand {
+	display: block;
+	height: 55px;
+	font-size: 0px;
 	text-align: center;
+	background: url(../img/mishka-logo-mobile.png) center 20px;
+	background-repeat: no-repeat;
 }
 
 .fa {
@@ -20,8 +25,7 @@
 
 @media @m-width-only {
 	.page-header {
-		position: static ;	
-		padding-top: 22.5px;
+		position: static ;
 	}
 
 	/* NAVIGATION */
@@ -30,7 +34,7 @@
 		position: relative;
 
 		width: auto;
-		border-top:1px solid #eee;
+		border-top: 1px solid #eee;
 		margin-top: 25px;
 	}
 
@@ -48,7 +52,6 @@
 
 		color: #000;
 		text-decoration: none;
-
 
 		background-color: #fff;
 
@@ -144,7 +147,6 @@
 }
 
 @media @t-width {
-
 	#hamburger {
 		display: none;
 	}
@@ -161,8 +163,9 @@
 
 	.page-header__brand {
 		position: relative;
-
-		text-align: left;
+		height: 80px;
+		background: url(../img/mishka-logo-tablet.png) left 20px;
+		background-repeat: no-repeat;
 	}
 
 	.page-header__main-nav__items {
@@ -208,7 +211,6 @@
 			margin-right: 0;
 		}
 	}
-
 
 	.page-header__main-nav__item a {
 		display: inline-block;
@@ -273,10 +275,11 @@
 	}
 
 	.page-header__brand {
-		position: relative;
-
-		text-align: right;
 		margin-right: 150px;
+		height: 80px;
+		width: 85%;
+		background: url(../img/mishka-logo-desktop.png) right 10px;
+		background-repeat: no-repeat;
 	}
 
 	.page-header__main-nav__menu1 {
@@ -311,7 +314,7 @@
 		.page-header__main-nav__item {
 			display: inline-block;
 			padding: 0;
-			margin-right: 25px;
+			padding-right: 25px;
 
 			a {
 				font-family: 'verdana';
