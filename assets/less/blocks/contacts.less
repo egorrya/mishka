@@ -108,8 +108,9 @@
     }
 
     .contacts__btn {
+        margin-bottom: 90px;
+
         text-align: center;
-        margin-bottom: 105px;
     }
 }
 
@@ -117,11 +118,32 @@
     .contacts {
         position: relative;
 
-        padding: 105px 0 0 150px ;
+        padding: 105px 0 0 120px ;
     }
-    
+
     .contacts__container-fluid {
         padding: 0 0 0 70px;
+    }
+
+    .contacts__title {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: -20px;
+            left: -100px;
+
+            display: block;
+
+            width: 47px;
+            height: 81px;
+            background-position: -60px -15px;
+
+            content: '';
+
+            background-image: url(../img/spritesheet.png);
+            background-repeat: no-repeat;
+        }
     }
 
     .contacts__body {

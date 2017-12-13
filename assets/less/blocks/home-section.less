@@ -12,6 +12,13 @@
     background-repeat: no-repeat;
 }
 
+.home-section__items {
+    display: grid;
+
+    .container-fluid();
+    grid-template-columns: 1fr;
+}
+
 .home-section__item {
     font-family: 'tahoma';
     font-size: 18px;
@@ -19,8 +26,6 @@
     line-height: 24px;
 
     position: relative;
-
-    display: block;
 
     min-height: 100px;
     padding: 25px 30px 30px;
@@ -37,23 +42,22 @@
 
     display: block;
 
+    background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
+}
 
-    &:nth-child(1) {
-        right: 10px;
+.home-section__item--icon1 {
+    width: 40px;
+    height: 62px;
 
-        width: 60px;
-        height: 60px;
+    background-position: -163px -136px;
+}
 
-        background-image: url(../img/interior.png);
-    }
+.home-section__item--icon2 {
+    width: 60px;
+    height: 60px;
 
-    &:nth-child(2) {
-        width: 60px;
-        height: 60px;
-
-        background-image: url(../img/toy-svg.png);
-    }
+    background-position: -326px -199px;
 }
 
 .home-section__item1 {
@@ -71,6 +75,10 @@
 }
 
 @media @t-width {
+    .home-section {
+        position: relative;
+    }
+
     .home-section__title {
         min-height: 620px;
         padding: 125px 130px 347px;
@@ -79,17 +87,8 @@
         background-repeat: no-repeat;
     }
 
-    .home-section__container-fluid {
-        display: grid;
-
-        .container-fluid();
+    .home-section__items {
         grid-template-columns: 1fr 1fr;
-    }
-
-     .home-section__items {
-        position: relative;
-
-        display: block;
     }
 
     .home-section__item {
@@ -98,15 +97,13 @@
 
         min-height: 105px;
         padding: 28px 35px 30px;
-
-        &:before {
-        }
     }
 
     // wave
 
-    .home-section__items::before {
+    .home-section::before {
         position: absolute;
+        z-index: 110;
         right: 0;
         bottom: 0;
         left: 0;
@@ -120,7 +117,7 @@
         background-size: 20px 20px;
     }
 
-    .home-section__items::after {
+    .home-section::after {
         position: absolute;
         right: 0;
         bottom: 0;
