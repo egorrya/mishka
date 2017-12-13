@@ -28,24 +28,18 @@
     text-decoration: none;
 
     color: #fff;
-
-    &:before {
-        position: absolute;
-        top: 25px;
-        right: 20px;
-
-        display: block;
-
-        content: '';
-
-        background-repeat: no-repeat;
-    }
 }
 
-.home-section__item1 {
-    background-color: #63d1bb;
+.home-section__item--icon {
+    position: absolute;
+    top: 25px;
+    right: 20px;
 
-    &:before {
+    display: block;
+
+    background-repeat: no-repeat;
+
+    &:nth-child(1) {
         right: 10px;
 
         width: 60px;
@@ -53,17 +47,21 @@
 
         background-image: url(../img/interior.png);
     }
-}
 
-.home-section__item2 {
-    background-color: #56c3b2;
-
-    &:before {
+    &:nth-child(2) {
         width: 60px;
         height: 60px;
 
         background-image: url(../img/toy-svg.png);
     }
+}
+
+.home-section__item1 {
+    background-color: #63d1bb;
+}
+
+.home-section__item2 {
+    background-color: #56c3b2;
 }
 
 @media @m-width-only {
@@ -81,15 +79,17 @@
         background-repeat: no-repeat;
     }
 
-    .home-section__items {
-        position: relative;
-    }
-
     .home-section__container-fluid {
         display: grid;
 
         .container-fluid();
         grid-template-columns: 1fr 1fr;
+    }
+
+     .home-section__items {
+        position: relative;
+
+        display: block;
     }
 
     .home-section__item {
@@ -100,41 +100,40 @@
         padding: 28px 35px 30px;
 
         &:before {
-            top: 30px;
         }
     }
 
-    // wave (has a conflict with icons)
+    // wave
 
-    // .home-section__item::before {
-    //     position: absolute;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
+    .home-section__items::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-    //     height: 10px;
+        height: 10px;
 
-    //     content: '';
+        content: '';
 
-    //     background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
-    //     background-repeat: repeat-x;
-    //     background-size: 20px 20px;
-    // }
+        background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+        background-repeat: repeat-x;
+        background-size: 20px 20px;
+    }
 
-    // .home-section__item::after {
-    //     position: absolute;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
+    .home-section__items::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
 
-    //     height: 15px;
+        height: 15px;
 
-    //     content: '';
+        content: '';
 
-    //     background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
-    //     background-repeat: repeat-x;
-    //     background-size: 40px 20px;
-    // }
+        background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+        background-repeat: repeat-x;
+        background-size: 40px 20px;
+    }
 }
 
 @media @d-width {

@@ -452,30 +452,23 @@ a.btn:active {
   text-decoration: none;
   color: #fff;
 }
-.home-section__item:before {
+.home-section__item--icon {
   position: absolute;
   top: 25px;
   right: 20px;
   display: block;
-  content: '';
   background-repeat: no-repeat;
+}
+.home-section__item--icon:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/toy-svg.png);
 }
 .home-section__item1 {
   background-color: #63d1bb;
 }
-.home-section__item1:before {
-  right: 10px;
-  width: 60px;
-  height: 60px;
-  background-image: url(../img/interior.png);
-}
 .home-section__item2 {
   background-color: #56c3b2;
-}
-.home-section__item2:before {
-  width: 60px;
-  height: 60px;
-  background-image: url(../img/toy-svg.png);
 }
 .product {
   position: relative;
@@ -788,9 +781,6 @@ a.btn:active {
     background: url(../img/hero-desktop.jpg) center 0;
     background-repeat: no-repeat;
   }
-  .home-section__items {
-    position: relative;
-  }
   .home-section__container-fluid {
     display: -ms-grid;
     display: grid;
@@ -798,14 +788,37 @@ a.btn:active {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
+  .home-section__items {
+    position: relative;
+    display: block;
+  }
   .home-section__item {
     font-size: 20px;
     line-height: 30px;
     min-height: 105px;
     padding: 28px 35px 30px;
   }
-  .home-section__item:before {
-    top: 30px;
+  .home-section__items::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    content: '';
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+    background-repeat: repeat-x;
+    background-size: 20px 20px;
+  }
+  .home-section__items::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    content: '';
+    background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+    background-repeat: repeat-x;
+    background-size: 40px 20px;
   }
   .product {
     width: 86%;
