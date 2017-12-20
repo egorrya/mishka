@@ -707,7 +707,7 @@ a.btn:active {
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
+  left: 10px;
   display: block;
   content: '';
   background-image: url(../img/spritesheet.png);
@@ -720,7 +720,7 @@ a.btn:active {
 }
 .page-footer__social-fb:before {
   top: -5px;
-  left: 3px;
+  left: 13px;
   width: 15px;
   height: 29px;
   background-position: -15px -15px;
@@ -807,17 +807,20 @@ a.btn:active {
     text-decoration: none;
     color: #000;
   }
-  .page-header__main-nav__item a span {
+  .page-header__main-nav__item a .search-span {
     display: none;
   }
   .page-header__main-nav__item a .fa-shopping-basket {
     margin-right: 25px;
   }
+  .page-header__main-nav__item a span {
+    color: #000;
+  }
   .page-header__main-nav__item a[href]:hover {
-    color: #333;
+    color: #666;
   }
   .page-header__main-nav__item a[href]:active {
-    color: #666;
+    color: #aaa;
   }
   .page-header__main-nav__item-delivery {
     z-index: 110;
@@ -1056,15 +1059,12 @@ a.btn:active {
     text-align: center;
   }
   .page-footer {
-    display: -ms-grid;
-    display: grid;
     padding: 30px 0 50px;
     background-color: #f1f1f1;
-    -ms-grid-columns: 1.8fr 1fr 1.7fr;
-    grid-template-columns: 1.8fr 1fr 1.7fr;
   }
   .page-footer__logo {
     display: block;
+    margin-top: 40px;
   }
 }
 @media (min-width: 1200px) {
@@ -1296,6 +1296,9 @@ a.btn:active {
     position: absolute;
     left: 12.5%;
     top: 32.5px;
+  }
+  .page-header__main-nav__item a span {
+    color: #000;
   }
   /* HAMBURGER */
   #hamburger {
