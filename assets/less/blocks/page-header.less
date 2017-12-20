@@ -10,17 +10,44 @@
 	font-size: 0px;
 	text-align: center;
 
-	width: 86px;
+	width: 85px;
 	height: 35px;
 
-	background: url(../img/spritesheet.png);
-	background-position: -328px -15px;
-	background-repeat: no-repeat;
+	&:hover {
+		opacity: .5;
+	}
+
+	&:active {
+		opacity: .3;
+	}
 }
 
-.fa {
-	color: rgba(0, 0, 0, 0.3);
-	font-size: 18px;
+
+.page-header__main-nav__item {
+	position: relative;
+}
+
+.page-header__main-nav__item-search .icon-search {
+	position: absolute;
+	top: 35px;
+	left: 30px;
+	width: 24px;
+	height: 22px;
+	fill: #d3d2d2;
+}
+
+.page-header__main-nav__item-basket .icon-cart {
+	position: absolute;
+	top: 35px;
+	left: 32px;
+	width: 23px;
+	height: 21px;
+	fill: #d3d2d2;
+}
+
+.page-header__main-nav__item-search:hover .icon-search,
+.page-header__main-nav__item-basket:hover .icon-cart {
+	fill: #63d1bb;
 }
 
 .page-header__main-nav__menu2,
@@ -63,20 +90,14 @@
 		border-bottom: 1px solid #eee;
 
 		&:hover {
-			color: #000;
-			background-color: #ccc;
-			border-bottom: 1px solid #bbb;
+			color: #555;
+			background-color: #fff;
 		}
+	}
 
-		.fa {
-			position: absolute;
-			left: 12.5%;
-			top: 32.5px;
-		}
-
-		span {
-			color: #000;
-		}
+	.page-header__main-nav__item-search .icon-search,
+	.page-header__main-nav__item-basket .icon-cart {
+		top: 30px;
 	}
 
 	/* HAMBURGER */
@@ -173,9 +194,6 @@
 	.page-header__brand {
 		position: relative;
 		margin: 20px 0 0;
-		background: url(../img/spritesheet.png);
-		background-repeat: no-repeat;
-
 		width: 113px;
 		height: 46px;
 		background-position: -276px -123px;
@@ -186,15 +204,6 @@
 		grid-template-columns: 1fr 300px;
 	}
 
-	.page-header__main-nav__item-search a[href] {
-		padding: 29px 33.5px;
-
-		border-left: 1px solid #eee;
-		border-right: 1px solid #eee;
-		&:hover {
-			color: #333;
-		}
-	}
 
 	.page-header__main-nav__menu1 {
 		z-index: 110;
@@ -237,10 +246,6 @@
 
 		color: #000;
 
-		.search-span {
-			display: none;
-		}
-
 		.fa-shopping-basket {
 			margin-right: 25px;
 		}
@@ -248,6 +253,18 @@
 		span {
 			color: #000;
 		}
+	}
+
+	.page-header__main-nav__item-search a {
+		width: 83px;
+		padding: 33px 0;
+		font-size: 0;
+		border-left: 1px solid #ececec;
+		border-right: 1px solid #ececec;
+	}
+
+	.page-header__main-nav__item-basket a {
+		padding-left: 75px;
 	}
 
 	.page-header__main-nav__item a[href]{
@@ -258,10 +275,6 @@
 		&:active {
 			color: #aaa;
 		}
-	}
-
-	.active {
-		border-bottom: 2px solid #333;
 	}
 
 	.page-header__main-nav__item-delivery  {
@@ -296,8 +309,6 @@
 
 	.page-header__brand {
 		margin: 10px 0 0 64%;
-		background: url(../img/spritesheet.png);
-		background-repeat: no-repeat;
 
 		width: 149px;
 		height: 72px;
@@ -314,10 +325,6 @@
 		.page-header__main-nav__item {
 			display: inline-block;
 			padding-right: 35px;
-
-			&:nth-child(1) {
-				border-right: 1px solid #eee;
-			}
 
 			a {
 				font-size: 16px;
