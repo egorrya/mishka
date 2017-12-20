@@ -12,9 +12,11 @@ rename = require("gulp-rename"),
 imagemin = require("gulp-imagemin"),
 svgmin = require("gulp-svgmin"),
 svgstore = require("gulp-svgstore"),
+uglify = require("gulp-uglify"),
 server = require("browser-sync"),
 run = require("run-sequence"),
 del = require("del");
+
 
 gulp.task("style", function() {
 	gulp.src("assets/less/style.less")
@@ -88,9 +90,10 @@ gulp.task("build", function(fn) {
 
 gulp.task("copy", function() {
 	gulp.src([
+		"assets/css/style.min.css",
 		"assets/fonts/**/*.{woff,woff2}",
-		"img/*.{jpg,png,svg,gif}",
-		"js/**",
+		"assets/img/*.{jpg,png,svg,gif}",
+		"assets/js/*.js",
 		"*.html"
 		], {
 			base: "."
@@ -98,16 +101,28 @@ gulp.task("copy", function() {
 	.pipe(gulp.dest("build"));
 });
 
-gulp.task("clean", function() {
-	del("build");
+gulp.task('jsmin', function() {
+  return gulp.src([
+    "assets/js/common.js"
+    ])
+    .pipe(gulp.dest("assets/js")) 
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'})) 
+    .pipe(gulp.dest('assets/js'))
+    .pipe(server.reload({stream: true}));
+});
+
+gulp.task("clean", function () { 
+  return del("build");
 });
 
 gulp.task("build", function(fn) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    "symbols",
-    fn
-  );
+	run(
+		"clean",
+		"style",
+		"jsmin",
+		"symbols",
+		"copy",
+		fn
+		);
 });
