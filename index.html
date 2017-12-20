@@ -88,11 +88,15 @@
     <div class="home-section__items">
       <a href="#" class="home-section__item home-section__item1">
         Предметы<br> интерьера
-        <div class="home-section__item--icon home-section__item--icon1"></div>
+        <svg class="icon icon-interior">
+          <use xlink:href="assets/img/symbols.svg#icon-interior"></use>
+        </svg>
       </a>
       <a href="#" class="home-section__item home-section__item2">
         Детские<br> игрушки
-        <div class="home-section__item--icon home-section__item--icon2"></div>
+        <svg class="icon icon-toy">
+          <use xlink:href="assets/img/symbols.svg#icon-toy"></use>
+        </svg>
       </a>
     </div>
   </section>
@@ -125,28 +129,50 @@
     <h2 class="product__price">Цена: 990 руб.</h2>
     <a class="product__btn btn" href="#">Заказать</a>
   </section>
-  <span class="bottom-wave"></span><!-- css code in product.less -->  
-  <section class="about">
-    <h1 class="about__title">Коротко о нас:</h1>
-    <div class="about__items">
-      <div class="about__item about__item1">
-        <h2>Экологически<br>чистые материалы</h2>
-      </div>
-      <div class="about__item about__item2">
-        <h2>Скандинавский стиль<br>по российской цене</h2>
-      </div>
-      <div class="about__item about__item3">
-        <h2>Увеличивает лайки<br>на фотографиях</h2>
-      </div>
-      <div class="about__item about__item4">
-        <h2>Поддержка отечественного<br>производителя</h2>
-      </div>
-      <div class="about__item about__item5">
-        <h2>Связано вручную с<br>любовью и умилением</h2>
-      </div>
-      <div class="about__item about__item6">
-        <h2>Поставляется в<br>подарочной упаковке</h2>
-      </div>
+  <svg class="bottom-wave">
+    <use xlink:href="assets/img/symbols.svg#bg-zigzag-line"></use>
+  </svg><!-- css code in product.less --> 
+  <section class="about-us">
+    <div class="about-us__wrapper">
+      <h2 class="about-us__title">Коротко о нас:</h2>
+      <ul class="about-us__list">
+        <li class="about-us__list-item">
+          <svg class="icon about-us__list-item--icon icon-feature-1">
+            <use xlink:href="assets/img/symbols.svg#icon-feature-1"></use>
+          </svg>
+          Экологически <br> чистые материалы
+        </li>
+        <li class="about-us__list-item">
+          <svg class="icon about-us__list-item--icon icon-feature-2">
+            <use xlink:href="assets/img/symbols.svg#icon-feature-2"></use>
+          </svg>
+          Связано вручную с <br> любовью и уважением
+        </li>
+        <li class="about-us__list-item">
+          <svg class="icon about-us__list-item--icon icon-feature-3">
+            <use xlink:href="assets/img/symbols.svg#icon-feature-3"></use>
+          </svg>
+          Скандинавский стиль <br> по российской цене
+        </li>
+        <li class="about-us__list-item">
+          <svg class="icon about-us__list-item--icon icon-feature-4">
+            <use xlink:href="assets/img/symbols.svg#icon-feature-4"></use>
+          </svg>
+          Поддержка отечественного <br> производителя
+        </li>
+        <li class="about-us__list-item">
+          <svg class="icon about-us__list-item--icon icon-feature-5">
+            <use xlink:href="assets/img/symbols.svg#icon-feature-5"></use>
+          </svg>
+          Увеличивает лайки <br> на фотографиях
+        </li>
+        <li class="about-us__list-item">
+          <svg class="icon about-us__list-item--icon icon-feature-6">
+            <use xlink:href="assets/img/symbols.svg#icon-feature-6"></use>
+          </svg>
+          Поставляется в <br> подарочной упаковке
+        </li>
+      </ul>
     </div>
   </section>
   <section class="reviews">
@@ -165,16 +191,30 @@
         </li>
       </ul>
       <div class="reviews__controls-all">
-        <button class="reviews__controls__left reviews__controls" id="previous"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button>
-        <button class="reviews__controls__right reviews__controls" id="next"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+        <button class="reviews__controls__left reviews__controls" id="previous">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-left-arrow"></use>
+          </svg>
+        </button>
+        <button class="reviews__controls__right reviews__controls" id="next">
+          <svg>
+            <use xlink:href="assets/img/symbols.svg#icon-right-arrow"></use>
+          </svg>
+        </button>
       </div>
       <a href="" class="reviews__btn btn">Написать</a> 
     </div>
   </section>
-  <span class="bottom-wave"></span><!-- css code in product.less --> 
+  <svg class="bottom-wave">
+    <use xlink:href="assets/img/symbols.svg#bg-zigzag-line"></use>
+  </svg><!-- css code in product.less --> 
   <section class="contacts">
     <div class="contacts__container-fluid">
-      <h1 class="contacts__title">Контакты</h1>
+      <h1 class="contacts__title">Контакты
+        <svg class="icon icon-flag">
+          <use xlink:href="assets/img/symbols.svg#icon-flag"></use>
+        </svg>
+      </h1>
       <div class="contacts__body">
         <p class="contacts__email"><span>e-mail:</span><a href="#"><span>info@mimimisho.ru</span></a></p>
         <span class="contacts__adress">адрес: 
@@ -189,18 +229,45 @@
       <a href="#" class=" btn">Напишите нам</a>
     </div><!-- contacts__container-fluid -->
   </section>
-  <footer class="page-footer">
-    <div class="page-footer__social">
-      <a href="#" class="page-footer__social-item page-footer__social-insta">Instagram</a>
-      <a href="#" class="page-footer__social-item page-footer__social-fb">Facebook</a>
-      <a href="#" class="page-footer__social-item page-footer__social-twi">Twitter</a>
-    </div>
-    <div class="page-footer__logo"></div>
-  </footer>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__logo page-footer__logo--hidden">
+          <svg class="icon footer-logo">
+            <use xlink:href="assets/img/symbols.svg#logo-mobile"></use>
+          </svg>
+        </p>
+        <p class="page-footer__social">
+          <span class="social-links">
+            <a class="social-link  " href="https://www.instagram.com/htmlacademy">Мы в Инстаграме
+              <svg class="icon social-link--icon social-link--icon-insta">
+                <use xlink:href="assets/img/symbols.svg#icon-insta"></use>
+              </svg>
+            </a>
+            <a class="social-link  " href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке
+              <svg class="icon social-link--icon social-link--icon-fb">
+                <use xlink:href="assets/img/symbols.svg#icon-fb"></use>
+              </svg>
+            </a>
+            <a class="social-link  " href="https://www.tweeter.com/htmlacademy">Мы в Твиттере
+              <svg class="icon social-link--icon social-link--icon-tw">
+                <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </span>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано:
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+            <svg class="icon icon-htmlacademy">
+              <use xlink:href="assets/img/symbols.svg#htmlacademy"></use>
+            </svg>
+          </a>
+        </p>
+      </div>
+    </footer>
 
 
   <script src="assets/js/common.js"></script>
-  <script src="assets/js/picturefill.min.js"></script>
   <script src="assets/js/svgxuse.min.js"></script>
 </body>
 </html>

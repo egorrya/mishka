@@ -1,7 +1,7 @@
 .reviews__container-fluid {
     position: relative;
 
-    padding: 40px 30px 0;
+    padding: 0 30px 0;
 
     .container-fluid();
 }
@@ -45,12 +45,17 @@
     cursor: pointer;
 
     border: 1px solid #ddd;
+    outline: none;
     background-color: #fff;
 
-    .fa {
-        font-size: 34px;
+    &:hover,
+    &:active{
+            background-color: #eee;
+        }
 
-        color: #000;
+    svg {
+        width: 34px;
+        margin-top: -50px;
     }
 }
 
@@ -94,7 +99,7 @@
 
     .reviews__controls-all {
         position: absolute;
-        top: 275px;
+        top: 290px;
         right: 0;
 
         width: 180px;
@@ -102,21 +107,17 @@
 
     .reviews__controls {
         border: 0;
+        outline: none;
 
-        &:hover {
-            background-color: #eee;
-        }
-
-        .fa {
-            font-size: 44px;
-
-            color: #000;
+        svg {
+            width: 44px;
+            margin-top: -50px;
         }
     }
 
     .reviews__btn {
         position: absolute;
-        top: 0;
+        top: 50px;
         right: 0;
     }
 }
@@ -140,11 +141,10 @@
         margin-bottom: 160px;
     }
     .reviews__controls-all {
-
         top: 320px;
     }
 
     .reviews__btn {
-        top: 85px;
+        top: 75px;
     }
 }

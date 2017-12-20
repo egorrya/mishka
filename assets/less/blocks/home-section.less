@@ -28,44 +28,68 @@
     position: relative;
 
     min-height: 100px;
-    padding: 25px 30px 30px;
+    padding: 24px 30px 30px;
 
     text-decoration: none;
 
     color: #fff;
-}
 
-.home-section__item--icon {
-    position: absolute;
-    top: 25px;
-    right: 20px;
-
-    display: block;
-
-    background-image: url(../img/spritesheet.png);
-    background-repeat: no-repeat;
-}
-
-.home-section__item--icon1 {
-    width: 40px;
-    height: 62px;
-
-    background-position: -163px -136px;
-}
-
-.home-section__item--icon2 {
-    width: 60px;
-    height: 60px;
-
-    background-position: -326px -199px;
+    .icon {
+        position: absolute;
+        top: 22px;
+    }
 }
 
 .home-section__item1 {
     background-color: #63d1bb;
+
+    &:hover,
+    &:active {
+        background-color: #59d5bc;
+    }
+}
+
+.icon-interior {
+    right: 30px;
+
+    width: 40px;
+    height: 62px;
+
+    fill: #3bb09d;
+}
+
+.home-section__item1:hover .icon-interior {
+    fill: #29a592;
+}
+
+.home-section__item1:active .icon-interior {
+    fill: #44c0aa;
 }
 
 .home-section__item2 {
     background-color: #56c3b2;
+
+    &:hover,
+    &:active {
+        background-color: #46c1ae;
+    }
+}
+
+.icon-toy {
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    fill: #35a999;
+}
+
+.home-section__item2:hover .icon-toy {
+    fill: #239f8e;
+}
+
+.home-section__item2:active .icon-toy {
+    fill: #37b2a0;
 }
 
 @media @m-width-only {
@@ -93,10 +117,10 @@
 
     .home-section__item {
         font-size: 20px;
-        line-height: 30px;
+        line-height: 26px;
 
         min-height: 105px;
-        padding: 28px 35px 30px;
+        padding: 24px 35px 30px;
     }
 
     // wave

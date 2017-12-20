@@ -10,6 +10,10 @@
 
 .contacts__title {
     margin-bottom: 25px;
+
+    .icon-flag {
+        display: none;
+    }
 }
 
 .contacts__body {
@@ -137,12 +141,20 @@
 
             width: 47px;
             height: 81px;
-            background-position: -60px -15px;
+        }
 
-            content: '';
+        .icon-flag {
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: -100px;
 
-            background-image: url(../img/spritesheet.png);
-            background-repeat: no-repeat;
+            display: block;
+
+            width: 47px;
+            height: 81px;
+            fill: #62d1ba;
+            color: #000000;
         }
     }
 
