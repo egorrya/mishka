@@ -431,7 +431,7 @@ a.btn:active {
   min-height: 295px;
   padding: 70px 14% 107px;
   text-align: center;
-  background: url(../img/hero-desktop.jpg) center 0;
+  background: url(../img/hero-mobile@1x.jpg) center bottom;
   background-repeat: no-repeat;
 }
 .home-section__items {
@@ -1455,5 +1455,10 @@ a.btn:active {
   .product__image {
     width: 260px;
     height: 315px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .home-section__title {
+    background-image: url("../img/hero-mobile-2x.jpg") center bottom;
   }
 }

@@ -8,8 +8,12 @@
 
     text-align: center;
 
-    background: url(../img/hero-desktop.jpg) center 0;
+    background: url(../img/hero-mobile@1x.jpg) center bottom;
     background-repeat: no-repeat;
+
+    @media @retina {
+      background-image: url("../img/hero-mobile-2x.jpg") center bottom;
+    }
 }
 
 .home-section__items {
