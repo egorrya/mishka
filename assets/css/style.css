@@ -1207,6 +1207,7 @@ a.btn:active {
     padding-top: 3px;
   }
   .catalog {
+    position: relative;
     margin-bottom: 55px;
   }
   .catalog__wrapper {
@@ -1252,6 +1253,29 @@ a.btn:active {
     width: 50%;
     height: 334px;
     margin: 0;
+  }
+  .catalog::before {
+    position: absolute;
+    z-index: 110;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    content: '';
+    background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+    background-repeat: repeat-x;
+    background-size: 20px 20px;
+  }
+  .catalog::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    content: '';
+    background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+    background-repeat: repeat-x;
+    background-size: 40px 20px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
