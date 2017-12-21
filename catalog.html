@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Catalog</title>
+  <!-- Import main styles -->
+  <link rel="stylesheet" href="assets/css/style.min.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+  <!--[if lt IE 10]>
+<link rel="stylesheet" href="assets/css/ie.css">
+<![endif]-->
+
+<!-- <script src="assets/libs/jquery-3.2.1.min.js"></script> -->
+<!-- <script src="assets/libs/jquery.waypoints.min.js"></script> -->
+<!-- <script src="assets/libs/animate-css.js"></script> -->
+
+</head>
+<body >
+  <h1 class="visually-hidden"></h1>
+  <header class="page-header">
+    <div class="page-header__container">
+      <a href="index.html">
+        <picture class="page-header__brand">
+          <source media="(min-width: 1150px)" srcset="assets/img/logo-desktop.svg"/>
+          <source media="(min-width: 768px)" srcset="assets/img/logo-tablet.svg"/>
+          <img class="logo__img" src="assets/img/logo-mobile.svg" alt="Mishka"/>
+        </picture>
+      </a>
+      <nav class="page-header__main-nav">
+        <input type="checkbox" id="hamburger"/>
+        <label class="menuicon" for="hamburger">
+          <span></span>
+        </label> 
+        <div class="page-header__main-nav__wrapper">
+          <ul class="page-header__main-nav__items">
+            <div class="page-header__main-nav__menu1 ">
+              <li class="page-header__main-nav__item ">
+                <a href="#">Каталог товаров</a>
+              </li>
+              <li class="page-header__main-nav__item">
+                <a href="#">Вязание на заказ</a>
+              </li>
+            </div>
+            <li class="page-header__main-nav__item page-header__main-nav__item-search">
+              <a href="#">
+                <svg class="icon icon-search">
+                  <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+                </svg>
+                Поиск по сайту
+              </a>
+            </li>
+            <li class="page-header__main-nav__item page-header__main-nav__item-basket">
+              <a href="#">
+                <svg class="icon icon-cart">
+                  <use xlink:href="assets/img/symbols.svg#icon-cart"></use>
+                </svg>
+                Корзина: пока пуста
+              </a>
+            </li> 
+            <div class="page-header__main-nav__menu2 ">
+              <li class="page-header__main-nav__item ">
+                <a href="#">Новые поступления</a>
+              </li>
+              <li class="page-header__main-nav__item">
+                <a href="#">Распродажа</a>
+              </li>
+            </div>
+            <li class="page-header__main-nav__item page-header__main-nav__item-delivery ">
+              <a href="#">Бесплатная доставка по России</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="catalog">
+    <h1 class="catalog__title">Каталог товаров</h1>
+    <div class="catalog__wrapper">
+      <article class="catalog__item">
+        <picture class="catalog__item-img">
+          <source media="(min-width: 1150px)" srcset="assets/img/photo-1-desktop.jpg"/>
+          <source media="(min-width: 768px)" srcset="assets/img/photo-1-tablet.jpg"/>
+          <img src="assets/img/photo-1-mobile.jpg" alt="Фото1"/>
+        </picture>
+        <div class="catalog__item-info">
+          <div class="catalog__item-info--box">
+            <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+            <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
+          </div>
+          <p class="catalog__item-price">1 200 руб.</p>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <picture class="catalog__item-img">
+          <source media="(min-width: 1150px)" srcset="assets/img/photo-2-desktop.jpg"/>
+          <source media="(min-width: 768px)" srcset="assets/img/photo-2-tablet.jpg"/>
+          <img src="assets/img/photo-2-mobile.jpg" alt="Фото2"/>
+        </picture>
+        <div class="catalog__item-info">
+          <div class="catalog__item-info--box">
+            <h3 class="catalog__item-title">Корзина для белья</h3>
+            <p class="catalog__item-desc">Диаметр 15 см, высота 10 см</p>
+          </div>
+          <p class="catalog__item-price">690 руб.</p>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <picture class="catalog__item-img">
+          <source media="(min-width: 1150px)" srcset="assets/img/photo-3-desktop.jpg"/>
+          <source media="(min-width: 768px)" srcset="assets/img/photo-3-tablet.jpg"/>
+          <img src="assets/img/photo-3-mobile.jpg" alt="Фото3"/>
+        </picture>
+        <div class="catalog__item-info">
+          <div class="catalog__item-info--box">
+            <h3 class="catalog__item-title">Большая корзина для игрушек</h3>
+            <p class="catalog__item-desc">Диаметр 30 см, высота 30 см</p>
+          </div>
+          <p class="catalog__item-price">1 500 руб.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <svg class="bottom-wave">
+    <use xlink:href="assets/img/symbols.svg#bg-zigzag-line"></use>
+  </svg><!-- css code in product.less --> 
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <p class="page-footer__logo page-footer__logo--hidden">
+        <svg class="icon footer-logo">
+          <use xlink:href="assets/img/symbols.svg#logo-mobile"></use>
+        </svg>
+      </p>
+      <p class="page-footer__social">
+        <span class="social-links">
+          <a class="social-link  " href="https://www.instagram.com/htmlacademy">Мы в Инстаграме
+            <svg class="icon social-link--icon social-link--icon-insta">
+              <use xlink:href="assets/img/symbols.svg#icon-insta"></use>
+            </svg>
+          </a>
+          <a class="social-link  " href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке
+            <svg class="icon social-link--icon social-link--icon-fb">
+              <use xlink:href="assets/img/symbols.svg#icon-fb"></use>
+            </svg>
+          </a>
+          <a class="social-link  " href="https://www.tweeter.com/htmlacademy">Мы в Твиттере
+            <svg class="icon social-link--icon social-link--icon-tw">
+              <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано:
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <svg class="icon icon-htmlacademy">
+            <use xlink:href="assets/img/symbols.svg#htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="assets/js/common.min.js"></script>
+  <script src="assets/js/svgxuse.min.js"></script>
+</body>
+</html>
