@@ -137,6 +137,10 @@ a {
  * Add the correct display in IE 9-.
  */
 
+video {
+  display: inline-block;
+}
+
 /**
  * Add the correct display in iOS 4-7.
  */
@@ -198,7 +202,8 @@ button { /* 1 */
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
 
-button {
+button,
+html [type="button"] {
   -webkit-appearance: button; /* 2 */
 }
 
@@ -206,7 +211,8 @@ button {
  * Remove the inner border and padding in Firefox.
  */
 
-button::-moz-focus-inner {
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -215,7 +221,8 @@ button::-moz-focus-inner {
  * Restore the focus styles unset by the previous rule.
  */
 
-button:-moz-focusring {
+button:-moz-focusring,
+[type="button"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -845,6 +852,82 @@ a.btn:active {
   cursor: pointer;
   fill: #d3d2d2;
 }
+.video {
+  margin-bottom: 58px;
+}
+.video__wrapper {
+  margin: 0 30px;
+  border: 1px solid #ececec;
+}
+.video__wrapper:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+.video__wrapper:active {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.video__box {
+  position: relative;
+}
+.video__player {
+  width: 100%;
+}
+.video__play {
+  font-size: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -49px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+.video__play-icon {
+  width: 100.678px;
+  height: 76.891px;
+  transition: .5s;
+  fill: #62d1ba;
+}
+.video__play-icon:hover {
+  transform: scale(1.2, 1.2);
+}
+.video__play-icon:active {
+  transform: scale(0.8, 0.8);
+  opacity: .5;
+}
+.video__info {
+  padding: 33px 35px;
+}
+.video__title,
+.video__title--mobile {
+  font: bold 16px/24px Verdana, Arial, sans-serif;
+  position: relative;
+  display: none;
+  margin: 0;
+  padding-left: 56px;
+}
+.video__title-icon {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  fill: #63d1bb;
+}
+.video__title--mobile {
+  display: block;
+  margin: 25px 35px;
+}
+.video__desc {
+  font: normal 14px/24px 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 25px;
+}
+.video__wrapper .btn {
+  box-sizing: border-box;
+  width: 100%;
+}
 @media (min-width: 768px) {
   h1 {
     font-size: 40px;
@@ -1268,6 +1351,47 @@ a.btn:active {
     background-repeat: repeat-x;
     background-size: 40px 20px;
   }
+  .video {
+    margin-bottom: 65px;
+  }
+  .video__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .video__player {
+    max-height: 460px;
+  }
+  .video__info {
+    padding: 40px;
+    padding-bottom: 45px;
+  }
+  .video__title {
+    font-size: 18px;
+    display: block;
+    margin: 0;
+    margin-top: -15px;
+    margin-bottom: 40px;
+    padding: 0;
+    padding-left: 70px;
+  }
+  .video__title-icon {
+    top: -5px;
+    left: 0;
+  }
+  .video__title--mobile {
+    display: none;
+  }
+  .video__title br {
+    display: none;
+  }
+  .video__desc {
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 36px;
+    padding: 0;
+  }
 }
 @media (min-width: 768px) and (min-width: 768px) {
   .about-us__wrapper {
@@ -1277,6 +1401,12 @@ a.btn:active {
     margin: 0 auto;
   }
   .catalog__wrapper {
+    width: 86%;
+    /* 640px / 768px */
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+  .video__wrapper {
     width: 86%;
     /* 640px / 768px */
     max-width: 1050px;
@@ -1506,6 +1636,55 @@ a.btn:active {
   .catalog__item-img {
     width: 316px;
     height: 462px;
+  }
+  .video {
+    margin-bottom: 105px;
+  }
+  .video__wrapper {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .video__box {
+    overflow: hidden;
+    width: 685px;
+  }
+  .video__player {
+    height: 480px;
+    margin-top: -5px;
+    margin-bottom: -10px;
+  }
+  .video__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 340px;
+    padding: 44px 50px 34px;
+  }
+  .video__title {
+    margin-bottom: 40px;
+    padding-left: 0;
+  }
+  .video__title-icon {
+    position: static;
+    display: block;
+    height: 28px;
+    margin: 0;
+    margin-bottom: 27px;
+  }
+  .video__title-text {
+    margin: 0;
+  }
+  .video__title br {
+    display: block;
+  }
+  .video__desc {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+  .video__wrapper .btn {
+    margin: 0;
   }
 }
 @media (min-width: 1200px) and (min-width: 768px) {
